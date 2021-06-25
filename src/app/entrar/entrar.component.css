@@ -1,0 +1,9 @@
+#img-bg{
+    background-image: url("https://logodownload.org/wp-content/uploads/2021/04/brooklyn-nets-logo-0.png");
+
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
