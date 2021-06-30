@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
 
-  user: User = new User
+  user: User = new User()
   confirmarSenha: string
   tipoUsuario: string
 
@@ -39,6 +39,7 @@ export class CadastrarComponent implements OnInit {
     this.user.tipo = this.tipoUsuario
 
     if(this.user.senha != this.confirmarSenha){
+      alert('Senhas não são identicas')
 
     }else{
       this.authService.cadastrar(this.user).subscribe((resp: User)  => {
