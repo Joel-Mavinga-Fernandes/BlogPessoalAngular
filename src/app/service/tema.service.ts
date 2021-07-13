@@ -17,27 +17,27 @@ export class TemaService {
   }
 
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('https://blogpessoaljoel.herokuapp.com/tema', this.token)
+    return this.http.get<Tema[]>('https://genblogfaccipieri.herokuapp.com/tema', this.token)
   }
 
   getByIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`https://blogpessoaljoel.herokuapp.com/tema/${id}`, this.token)
+    return this.http.get<Tema>(`https://genblogfaccipieri.herokuapp.com/tema/${id}`, this.token)
   }
 
   getByNomeTema(nome: string): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://blogpessoaljoel.herokuapp.com/tema/nome/${nome}`, this.token)
+    return this.http.get<Tema[]>(`https://genblogfaccipieri.herokuapp.com/tema/nome/${nome}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('https://blogpessoaljoel.herokuapp.com/tema'
+    return this.http.post<Tema>('https://genblogfaccipieri.herokuapp.com/tema'
     , tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://blogpessoaljoel.herokuapp.com/tema', tema, this.token)
+    return this.http.put<Tema>('https://genblogfaccipieri.herokuapp.com/tema', tema, this.token)
   }
 
   deleteTema(id: number){
-    return this.http.delete(`https://blogpessoaljoel.herokuapp.com/tema/${id}`, this.token)
+    return this.http.delete(`https://genblogfaccipieri.herokuapp.com/tema/${id}`, this.token)
   }
 }
